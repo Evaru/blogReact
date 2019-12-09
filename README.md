@@ -1,4 +1,5 @@
 Пример блога на react&&localStorage
+demo - http://artbook.palashchenko.ru/
 
 Запуск : npm start
 
