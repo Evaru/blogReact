@@ -1,0 +1,42 @@
+.Input{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-bottom: 20px;
+    %input{
+        border-radius: 6px;
+        border: 1px solid rgba(0, 82, 82, 0.767);;
+        text-indent: 15px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        outline: none;
+        padding: 5px;
+    }
+    input{
+        @extend %input;
+        height: 30px;
+    }
+    textarea{
+        @extend %input;
+        min-height: 160px;
+    }
+    span{
+        color: red;
+        margin-bottom: 30px;
+    }
+    .inValid::placeholder{
+        color: red
+    }
+}
+@media screen and (max-width: 800px) {
+    .Input{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .Input{
+        input,textarea{
+            width: 100%;
+        }
+    }
+}

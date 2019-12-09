@@ -1,0 +1,21 @@
+.pagination {
+    width: 100%;
+    max-width: 900px;
+}
+.pagination-controls{
+    .pagination-controls__button{
+        background: maroon;
+        color:white;
+        font-weight: bold;
+        border: 3px solid white;
+        cursor: pointer;
+    }
+    .pagination-controls__button:hover{
+        border: 3px dashed white;
+        background: #003232;
+    }
+    .pagination-controls__button--active{
+        border: 3px dashed white;
+        background: #003232!important;
+    }
+}

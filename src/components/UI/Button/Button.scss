@@ -1,0 +1,149 @@
+%buttonStyle{
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.Redact{
+    @extend %buttonStyle;
+    color:white;
+    background: #003232;
+    border: 5px dashed white;
+    text-shadow: none;
+    box-shadow: 5px 6px 70px #eee23e79, 0em 0em 1em #c9af1f7a;
+    margin-right: 25px;
+    display: inline-block;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 6px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    line-height: initial;
+    font-weight: bold;
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    button{
+        @extend %buttonStyle;
+        background: none;
+        color: white;
+        line-height: initial;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+}
+
+.Button{
+    a,button{
+        @extend %buttonStyle;
+        background-color: white;
+        margin-right: 25px;
+        display: inline-block;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 6px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        line-height: initial;
+        font-weight: bold;
+    }
+    a,button:hover{
+        background: white;
+    }
+}
+.Save{
+    @extend %buttonStyle;
+    color:#003232;
+    background: #d3f800;
+    border: 5px dashed #003232;
+    text-shadow: none;
+    box-shadow: 0px 3px 14px 3px #003232;
+    //box-shadow: 5px 6px 70px #eee23e79, 0em 0em 1em #c9af1f7a;
+    margin-right: 25px;
+    display: inline-block;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 6px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    line-height: initial;
+    font-weight: bold;
+    height: max-content;
+    a{
+        text-decoration: none;
+        color:#003232;
+        font-weight: bold;
+    }
+    button{
+        @extend %buttonStyle;
+        background: none;
+        color:#003232;
+        line-height: initial;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+}
+.Cansel{
+    a,button{
+        @extend %buttonStyle;
+        background:maroon;
+        color: white;
+        display: inline-block;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 6px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        line-height: initial;
+        font-weight: bold;
+        border: 5px dashed white;
+        box-shadow: 0px 3px 14px 3px maroon;
+    }
+    
+}
+
+@media screen and (max-width:800px){
+    %mobileButton{
+        font-size: 10px;
+    }
+    .Redact,.Cansel,.Button{
+        padding: 5px;
+        
+        border: 2px dashed white!important;
+        font-size: 10px;
+        a,button{
+           @extend %mobileButton;
+           padding: 5px;
+        }
+    }
+    .Cansel{
+        
+        button{
+            padding: 5px 10px;
+            border: 2px dashed white;
+        }
+    }
+    .Save{
+        padding: 5px;
+        border: 2px dashed #003232;
+        font-size: 10px;
+        a,button{
+           @extend %mobileButton;
+        }
+    }
+    
+}

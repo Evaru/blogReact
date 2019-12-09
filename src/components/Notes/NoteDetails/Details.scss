@@ -1,0 +1,180 @@
+.Note{    
+    // display: flex;
+    // flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 10%;
+    margin-top: 240px;
+    color:	#530000;
+    align-items: center;
+    
+    img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .Note__Details{
+        border-radius: 5px;
+        background: white;
+        border-radius: 5px;
+        border: 25px dashed maroon;
+        cursor: pointer;
+        padding: 20px;
+        -webkit-box-shadow: 17px 25px 64px 12px rgba(158,153,158,0.49);
+        -moz-box-shadow: 17px 25px 64px 12px rgba(158,153,158,0.49);
+        box-shadow: 17px 25px 64px 12px rgba(158,153,158,0.49);
+        h2{text-align: center}
+        .add__comment{
+            display: flex;
+            flex-direction: row;
+        }
+        .Note__Details-main{
+            display: flex;
+            justify-content: space-between;
+            
+            .Redact,.Save{
+                max-height: 30px;
+                box-shadow: 0px 3px 14px 3px #003232;
+               button{
+                font-weight: bold;
+               }
+            }
+            .Note__Details-main__content{
+                width: 100%;
+                
+            }
+            .Note__Details-main__redact{
+                width: 20px;
+                height: 20px;
+            }
+    
+        }
+        .NoteDetails__comments{ 
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-top: 5px dashed black;
+            .NoteDetails__comment{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 30px;
+                border-bottom: 1px dashed;
+                .NoteDetails__comment-content {
+                    width: 100%;
+                }
+                .Note__Details-main__content{
+                    width: 900%;
+                    margin: 0 5%;
+                }
+                .NoteDetails__comment-button{
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .Cansel{
+                        padding: 0;
+                        button{
+                            box-shadow: 0px 3px 14px 3px maroon;
+                        }
+                    }
+                    
+                    .Redact{
+                        border: 5px dashed;
+                        margin:0 10px;
+                        max-height: 20px;
+                        box-shadow: 0px 3px 14px 3px #003232;
+                        button{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .NoteDetails__comment-text{
+                    margin-left: 10px;
+                    border-radius: 5px;
+                    background: #e0dede59;
+                   
+                }
+               
+            }
+        }
+    }
+    .Cansel{
+        box-shadow: none;
+        border: 5px dashed white; 
+        max-height: 30px;
+        button{
+            font-size: 10px;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .Note{
+      margin-top: 180px;
+      
+      .Cansel,.Redact{
+        margin: 0;
+        margin-left: -7px;
+        margin-top: -4px;
+      }
+      
+      .Note__Details{
+        border: 5px dashed maroon;
+        .NoteDetails__comments{
+            .NoteDetails__comment{
+                
+                .NoteDetails__comment-button{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 2;
+                    align-items: flex-end;
+
+                    .Redact{
+                        margin: 5px;
+                    }
+                    .Cansel{
+                        border:none!important;
+                        max-height: 30px;
+                        margin: 5px;
+                        button{
+                            padding: 7px 10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .Note__Details-main{
+            flex-direction: column;
+            .Redact,.Save{
+                text-align: center;
+                margin:10px 0;
+                font-size: 10px;
+                
+            }
+            
+        }
+        .Notes__list-block__remove{
+          .Cansel{
+            margin: 0;
+            margin-left: -7px;
+            margin-top: -4px;
+            
+            button{
+                padding: 5px 10px;
+            }
+          }
+          
+        }
+      }
+      
+    }
+  }
